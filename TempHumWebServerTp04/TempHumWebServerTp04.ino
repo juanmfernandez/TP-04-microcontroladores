@@ -1,7 +1,7 @@
 #include "DHT.h"
 #include <RestClient.h>
 
-RestClient client = RestClient("http://c8t54pern.alwaysdata.net");
+RestClient client = RestClient("c8t54pern.alwaysdata.net");
 
 #define DHTPIN D6
 DHT dht22(DHTPIN, DHT22);
@@ -12,7 +12,7 @@ const char* api_key    = "edutech";
 void setup() {
   Serial.begin(115200);
   dht22.begin();
-  client.begin("your_ssid", "password");
+  client.begin("your_ssid", "your_password");
   Serial.println("Servidor inicializado!");
 }
 
